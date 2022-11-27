@@ -18,25 +18,25 @@ public class Nasabah {
     @Setter @Getter
     private String nama;
 
-    @Column(nullable = false, columnDefinition = "boolean default false")
+    @Column(nullable = false)
     @Setter @Getter
     private String alamat;
 
     @Column(nullable = false, columnDefinition = "boolean default false")
     @Setter @Getter
-    private Boolean ktp;
+    private Boolean ktp = false;
 
     @Column(nullable = false, columnDefinition = "boolean default false")
     @Setter @Getter
-    private Boolean kk;
+    private Boolean kk = false;
 
     @Column(nullable = false, columnDefinition = "boolean default false")
     @Setter @Getter
-    private Boolean bpkb;
+    private Boolean bpkb = false;
 
     @Column(name = "surat_tanah", nullable = false, columnDefinition = "boolean default false")
     @Setter @Getter
-    private Boolean suratTanah;
+    private Boolean suratTanah = false;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(nullable = false)

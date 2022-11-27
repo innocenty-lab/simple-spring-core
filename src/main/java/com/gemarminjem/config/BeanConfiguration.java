@@ -7,6 +7,7 @@ import com.gemarminjem.util.JpaUtil;
 import jakarta.persistence.EntityManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class BeanConfiguration {
@@ -83,32 +84,45 @@ public class BeanConfiguration {
         return new NasabahService();
     }
 
-    @Bean Bunga getBungaObj() {
+    @Bean
+    @Scope("prototype")
+    JenisPinjaman getJenisPinjamanObj() {
+        return new JenisPinjaman();
+    }
+
+    @Bean
+    @Scope("prototype")
+    LamaAngsuran getLamaAngsuranObj() {
+        return new LamaAngsuran();
+    }
+
+    @Bean
+    @Scope("prototype")
+    Bunga getBungaObj() {
         return new Bunga();
     }
 
-    @Bean Cabang getCabangObj() {
+    @Bean
+    @Scope("prototype")
+    Cabang getCabangObj() {
         return new Cabang();
     }
 
     @Bean
+    @Scope("prototype")
     ProdukPinjaman getDetailJenisPinjamanObj() {
         return new ProdukPinjaman();
     }
 
-    @Bean DetailPinjaman getDetailPinjamanObj() {
+    @Bean
+    @Scope("prototype")
+    DetailPinjaman getDetailPinjamanObj() {
         return new DetailPinjaman();
     }
 
-    @Bean JenisPinjaman getJenisPinjamanObj() {
-        return new JenisPinjaman();
-    }
-
-    @Bean LamaAngsuran getLamaAngsuranObj() {
-        return new LamaAngsuran();
-    }
-
-    @Bean Nasabah getNasabahObj() {
+    @Bean
+    @Scope("prototype")
+    Nasabah getNasabahObj() {
         return new Nasabah();
     }
 }

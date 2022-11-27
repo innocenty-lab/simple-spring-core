@@ -10,7 +10,7 @@ import lombok.ToString;
 @ToString
 public class JenisPinjaman {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "jenis_pinjaman_id", nullable = false)
     @Setter @Getter
     private long jenisPinjamanId;

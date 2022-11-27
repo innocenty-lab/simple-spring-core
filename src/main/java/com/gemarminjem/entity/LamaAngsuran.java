@@ -17,5 +17,5 @@ public class LamaAngsuran {
 
     @Column(name = "bulan_angsuran", nullable = false)
     @Setter @Getter
-    private String bulanAngsuran;
+    private Integer bulanAngsuran;
 }

@@ -42,8 +42,8 @@ public class DetailPinjamanRepository implements IBaseRepository<DetailPinjaman>
     public void update(int id, DetailPinjaman data) {
         DetailPinjaman oldDetailPinjaman = getById(id);
 
-        if (data.getNasabahList() != null) {
-            oldDetailPinjaman.setNasabahList(data.getNasabahList());
+        if (data.getNasabah() != null) {
+            oldDetailPinjaman.setNasabah(data.getNasabah());
         }
 
         if (data.getProdukPinjaman() != null) {
